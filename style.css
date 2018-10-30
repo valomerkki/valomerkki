@@ -139,8 +139,8 @@ body {
   width: 100%;
   background: #05cf00;
   font-family: 'Krona One', sans-serif;
-  font-size: 1em;
-  padding: 0 20px;
+  font-size: 16px;
+  padding: 0 20px 0 75px;
 }
 div.gradients:before,
 div.gradients:after {
@@ -167,10 +167,23 @@ div.gradients span {
   bottom: 0;
   left: 0;
 }
+a {
+  color: #000;
+}
+a:link {
+  text-decoration: none;
+}
 h1 {
   font-size: 2.5em;
-  margin: 1em 0 0.5em;
+  margin: 1.5em 0 0.5em;
   line-height: 1.2;
+}
+p,
+h1,
+li {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 p,
 ol,
@@ -185,15 +198,59 @@ ul {
   list-style-position: inside;
 }
 ol li {
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 strong {
   border-bottom: 3px solid #000;
 }
-nav {
-  width: calc(100% - 40px);
-  height: 100px;
+div#menuToggleOpen {
   position: fixed;
+  top: 5px;
+  left: 20px;
+  width: 35px;
+  height: 170px;
+  font-size: 2em;
+  z-index: 2;
+  word-break: break-all;
+  cursor: pointer;
+}
+nav#menu {
+  width: calc(100% - 40px);
+  position: fixed;
+  background: #fff;
+  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, #05cf00 100%);
+  width: 100%;
+  height: 50%;
+  z-index: 1;
+  left: 55px;
+  padding-left: 20px;
+  transition: transform 1s ease;
+}
+nav#menu.open {
+  transform: translateY(0);
+}
+nav#menu.closed {
+  transform: translateY(-400px);
+}
+nav#menu ul {
+  position: relative;
+  font-size: 2.5em;
+  line-height: 1.2;
+  list-style-type: none;
+}
+nav#menu ul li {
+  margin-bottom: 0;
+  position: relative;
+}
+nav#menu ul li:hover:before {
+  z-index: -10;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  top: -25px;
+  left: -20px;
   background: #fff;
   background: linear-gradient(180deg, rgba(255,255,255,0) 0%, #fff 50%, rgba(0,0,0,0) 100%);
 }
@@ -202,5 +259,31 @@ article {
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
-  padding: 2em 0 200px;
+  padding: 14em 0 200px;
+}
+@media only screen and (max-width: 1024px) {
+  body {
+    padding: 0 5px 0 30px;
+    font-size: 10px;
+  }
+  div.gradients:before {
+    left: 5px;
+  }
+  div.gradients:after {
+    display: none;
+  }
+  nav#menu {
+    left: 27px;
+    font-size: 0.8em;
+    padding-left: 5px;
+    padding-top: 5px;
+  }
+  div#menuToggleOpen {
+    left: 5px;
+    width: 22px;
+    height: 100px;
+  }
+  article {
+    padding-top: 9em;
+  }
 }

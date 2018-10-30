@@ -9,14 +9,22 @@
 		<link rel="stylesheet" href="style.css" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Krona+One" rel="stylesheet">
 	</head>
-	<body>
+	<body lang="fi">
 
 <div class="gradients"><span></span></div>
 
-<nav>
+<div id="menuToggleOpen">#MENU</div>
+<nav id="menu" class="open">
+	<ul>
+		<li><a href="#valomerkki">VALOMERKKI</a></li>
+		<li><a href="#esimerkit">ESIMERKKITAPAUKSIA</a></li>
+		<li><a href="#lisaa">LISÄÄ AIHEESTA</a></li>
+		<li><a href="#yhteys">YHTEYS</a></li>
+		<li><a href="#english">IN ENGLISH</a></li>
+	</ul>
 </nav>
 
-	<article>
+	<article id="valomerkki">
 		<h1>
 			Valot päälle!
 		</h1>
@@ -70,6 +78,52 @@
 			</ul>	
 		</p>
 	</article>
+	<article id="esimerkit">
+		<h1>
+			ESIMERKKITAPAUKSIA
+		</h1>
+		<p>Tulossa...</p>
+	</article>
+	<article id="lisaa">
+		<h1>
+			Lisää aiheesta
+		</h1>
+		<p>Tulossa...</p>
+	</article>
+	<article id="yhteys">
+		<h1>
+			YHTEYSTIEDOT
+		</h1>
+		<p>valomerkki@protonmail.com</p>
+	</article>
+	<article id="english" lang="en">
+		<h1>
+			IN ENGLISH
+		</h1>
+		<p>Coming later...</p>
+	</article>
 
+	<script>
+		var clickedOpen;
+
+		function classToggle() {
+		    document.querySelector('#menu').classList.toggle('open');
+		    document.querySelector('#menu').classList.toggle('closed');
+		    clickedOpen = true;
+		}
+		document.querySelector('#menuToggleOpen').addEventListener('click', classToggle);
+
+		window.onscroll = function changeNav(){
+		    var navBar = document.getElementById('menu');
+		    var scrollPos = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
+
+		    if(scrollPos == 0) {
+		    	navBar.className = ('open');
+		    	clickedOpen = false;
+		    } else if (clickedOpen !== true) {
+		    	navBar.className = ('closed');
+		    }
+		}
+	</script>
 	</body>
 </html>
