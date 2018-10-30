@@ -262,6 +262,10 @@ article {
   margin: 0 auto;
   padding: 14em 0 200px;
 }
+div.iframecontainer {
+  width: 100%;
+  overflow-x: auto;
+}
 @media only screen and (max-width: 1024px) {
   body {
     padding: 0 5px 0 30px;
