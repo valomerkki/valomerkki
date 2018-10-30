@@ -279,6 +279,9 @@ article {
     padding-left: 5px;
     padding-top: 5px;
   }
+  nav#menu ul li:hover:before {
+    display: none;
+  }
   div#menuToggleOpen {
     left: 5px;
     width: 22px;
