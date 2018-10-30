@@ -147,7 +147,8 @@ div.gradients:after {
   content: '';
   display: block;
   position: fixed;
-  height: 100%;
+  height: 200%;
+  top: -50%;
   width: 200px;
   background: #fff;
   background: linear-gradient(270deg, rgba(255,255,255,0) 0%, #f76c05 100%);
