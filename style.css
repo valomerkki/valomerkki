@@ -140,6 +140,7 @@ body {
   background: #05cf00;
   font-family: 'Krona One', sans-serif;
   font-size: 1em;
+  padding: 0 20px;
 }
 div.gradients:before,
 div.gradients:after {
@@ -168,11 +169,12 @@ div.gradients span {
 }
 h1 {
   font-size: 2.5em;
-  margin-bottom: 1em;
+  margin: 1em 0 0.5em;
   line-height: 1.2;
 }
 p,
-ol {
+ol,
+ul {
   font-size: 1.5em;
   margin-bottom: 1em;
   line-height: 1.5;
@@ -192,7 +194,6 @@ nav {
   width: calc(100% - 40px);
   height: 100px;
   position: fixed;
-  margin: 0 20px;
   background: #fff;
   background: linear-gradient(180deg, rgba(255,255,255,0) 0%, #fff 50%, rgba(0,0,0,0) 100%);
 }
