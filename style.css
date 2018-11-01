@@ -180,7 +180,6 @@ h1 {
   line-height: 1.2;
 }
 p,
-h1,
 li {
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -214,6 +213,7 @@ div#menuToggleOpen {
   z-index: 2;
   word-break: break-all;
   cursor: pointer;
+  line-height: 1.49;
 }
 nav#menu {
   width: calc(100% - 40px);
@@ -260,16 +260,22 @@ article {
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
-  padding: 14em 0 200px;
+  padding: 20em 0 200px;
 }
 div.iframecontainer {
   width: 100%;
+  padding: 5px 0;
   overflow-x: auto;
 }
 @media only screen and (max-width: 1024px) {
   body {
     padding: 0 5px 0 30px;
     font-size: 10px;
+  }
+  h1 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
   div.gradients:before {
     left: 5px;
@@ -290,8 +296,6 @@ div.iframecontainer {
     left: 5px;
     width: 22px;
     height: 100px;
-  }
-  article {
-    padding-top: 9em;
+    line-height: 1.2;
   }
 }
